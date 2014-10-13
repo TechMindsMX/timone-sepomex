@@ -2,17 +2,11 @@ package com.tim.one.sepomex
 
 class SepomexController {
 
-		static allowedMethods = [index:'GET']
+		static allowedMethods = [show:'GET']
 
-    def index() { 
-    	render(contentType:"application/json", status:200) {
-      [sepomexes: Sepomex.findAllByDCodigo(params.cp)]
-    	}
-    }
-
-    def show(String cp){
+    def show(String id){
     render(contentType:"application/json", status:200) {
-      Sepomex.findByDCodigo(cp)
+      Sepomex.findByDCodigo(id)
     }
   }
   

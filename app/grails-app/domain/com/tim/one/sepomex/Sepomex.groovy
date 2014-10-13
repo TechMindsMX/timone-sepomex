@@ -1,7 +1,7 @@
 package com.tim.one.sepomex
 
 class Sepomex {
-
+  Integer id
 	String dCodigo
 	String dAsenta
 	String dTipoAsenta
@@ -18,8 +18,10 @@ class Sepomex {
 	String dZona
 	String cCveCiudad	
 
-  static constraints = {
+  static mapping = {
   	version false
+    table 'sepomex'
+    id column:'id'
   	dCodigo column:'d_codigo'
   	dAsenta column:'d_asenta'
   	dTipoAsenta column:'d_tipo_asenta'
